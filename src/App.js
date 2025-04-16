@@ -4,7 +4,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://52.77.245.162:4000')  // Replace with your backend URL
+    fetch('http://52.77.245.162:4000/api/hello')  // Replace with your backend URL
       .then(res => res.json())
       .then(data => setMessage(data.message))
       .catch(err => console.error('Error fetching message:', err));
